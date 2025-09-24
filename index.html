@@ -220,7 +220,7 @@
 
       .language-modal h2 {
         color: #ffffff;
-        margin-bottom: 35px;
+        margin-bottom: 5px;
         font-size: 1.8rem;
         font-weight: 700;
         background: linear-gradient(45deg, #ff6b9d, #4ecdc4);
@@ -309,6 +309,14 @@
       }
 
       .modal-subtitle {
+        color: #b0b0b0;
+        font-size: 0.95rem;
+        font-weight: 400;
+        margin-top: 40px;
+        margin-bottom: 10px;
+      }
+
+      .modal-subtitle2 {
         color: #b0b0b0;
         font-size: 0.95rem;
         margin-bottom: 40px;
@@ -597,7 +605,7 @@
 
       .slider-image {
         width: 100%;
-        height: 450px;
+        height: 500px;
         object-fit: cover;
         flex-shrink: 0;
         filter: brightness(1.1) contrast(1.2) saturate(1.3);
@@ -744,7 +752,7 @@
       .card-border-wrapper {
         max-width: 500px;
         margin: 40px auto;
-        padding: 2px;
+        padding: 5px;
         background: linear-gradient(45deg, #ff6b9d, #4ecdc4, #ffd93d);
         border-radius: 25px;
         position: relative;
@@ -1683,7 +1691,7 @@
 
         .featured-model-card {
           border-radius: 15px;
-          margin: 30px 0;
+          margin: 1px 0;
           max-width: none;
         }
 
@@ -1793,7 +1801,7 @@
         }
 
         .slider-image {
-          height: 250px;
+          height: 500px;
         }
 
         .topic-image img {
@@ -1833,15 +1841,17 @@
           <div class="sparkle"></div>
         </div>
 
-        <h2 data-key="choose-language">Choose your language</h2>
-        <p class="modal-subtitle">Select your preferred language to continue</p>
+        <h2>Wählen Sie Ihre Sprache</h2>
+        <h2>Choose your language</h2>
+        <p class="modal-subtitle">Wählen Sie Ihre bevorzugte Sprache aus, um fortzufahren</p>
+        <p class="modal-subtitle2">Select your preferred language to continue</p>
 
         <div class="language-buttons">
           <button class="lang-btn german" onclick="setLanguage('de')">
             <div class="lang-flag">
               <svg viewBox="0 0 45 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="45" height="32" fill="#000" />
-                <rect width="45" height="10.67" fill="#DD0000" />
+                <rect width="45" height="10.67" fill="#000000" />
+                <rect y="10.67" width="45" height="10.67" fill="#DD0000" />
                 <rect y="21.33" width="45" height="10.67" fill="#FFCE00" />
               </svg>
             </div>
@@ -1850,13 +1860,8 @@
 
           <button class="lang-btn english" onclick="setLanguage('en')">
             <div class="lang-flag">
-              <svg viewBox="0 0 45 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="45" height="32" fill="#012169" />
-                <path d="M0 0L45 32M45 0L0 32" stroke="white" stroke-width="3.5" />
-                <path d="M22.5 0V32M0 16H45" stroke="white" stroke-width="5.5" />
-                <path d="M22.5 0V32M0 16H45" stroke="#C8102E" stroke-width="3.5" />
-                <path d="M0 0L45 32M45 0L0 32" stroke="#C8102E" stroke-width="2" />
-              </svg>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/English_language.svg"
+                alt="English Language Flag" style="width:100%; height:100%; object-fit:cover;">
             </div>
             <span class="lang-text">English</span>
           </button>
@@ -1868,38 +1873,45 @@
     <div class="language-selector">
       <div class="custom-select" id="customSelect">
         <div class="select-trigger" id="selectTrigger">
+
+          <!-- Tampilan Default (sudah diperbaiki) -->
           <div class="selected-option" id="selectedOption">
+            <!-- Bendera Jerman yang BENAR -->
             <svg class="flag-icon" viewBox="0 0 45 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="45" height="32" fill="#000" />
-              <rect width="45" height="10.67" fill="#DD0000" />
+              <rect width="45" height="10.67" fill="#000000" />
+              <rect y="10.67" width="45" height="10.67" fill="#DD0000" />
               <rect y="21.33" width="45" height="10.67" fill="#FFCE00" />
             </svg>
             <span class="lang-text">DE</span>
           </div>
-          <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+
+          <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12" fill="none">
             <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
         </div>
+
         <div class="select-options" id="selectOptions">
+
+          <!-- Opsi Jerman (sudah diperbaiki) -->
           <div class="option" data-value="de">
+            <!-- Bendera Jerman yang BENAR -->
             <svg class="flag-icon" viewBox="0 0 45 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="45" height="32" fill="#000" />
-              <rect width="45" height="10.67" fill="#DD0000" />
+              <rect width="45" height="10.67" fill="#000000" />
+              <rect y="10.67" width="45" height="10.67" fill="#DD0000" />
               <rect y="21.33" width="45" height="10.67" fill="#FFCE00" />
             </svg>
             <span class="lang-text">Deutsch</span>
           </div>
+
+          <!-- Opsi Inggris (sudah diperbarui ke link eksternal) -->
           <div class="option" data-value="en">
-            <svg class="flag-icon" viewBox="0 0 45 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="45" height="32" fill="#012169" />
-              <path d="M0 0L45 32M45 0L0 32" stroke="white" stroke-width="3.5" />
-              <path d="M22.5 0V32M0 16H45" stroke="white" stroke-width="5.5" />
-              <path d="M22.5 0V32M0 16H45" stroke="#C8102E" stroke-width="3.5" />
-              <path d="M0 0L45 32M45 0L0 32" stroke="#C8102E" stroke-width="2" />
-            </svg>
+            <!-- Bendera gabungan UK/US dari Wikimedia -->
+            <img class="flag-icon" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/English_language.svg"
+              alt="English Language Flag">
             <span class="lang-text">English</span>
           </div>
+
         </div>
       </div>
     </div>
@@ -2356,7 +2368,7 @@
       <h4 style="color: #4ecdc4; font-size: 1.3rem; margin-bottom: 15px; font-weight: 700;" data-key="about-alina-title">Über Alina:</h4>
       <p class="creator-description" style="color: #ff6b9d; font-size: 1.2rem; font-weight: 600; line-height: 1.5;" data-key="alina-description">Finde heraus was Alina so besonders macht</p>
     </div>
-    <a href="${alinaData.channelUrl}" target="_blank" class="btn-primary" data-key="visit-channel-button">Visit Channel</a> `;
+    <a href="${alinaData.channelUrl}" target="_blank" class="btn-primary" data-key="visit-channel-button">Visit Channel ❤️</a> `;
 
         const trackEl = cardNode.querySelector('.slider-track');
         const dotsContainer = cardNode.querySelector('.slider-dots');
@@ -2568,7 +2580,7 @@
           "featured-alina-name": "Alina", // Nama mungkin tetap sama, tapi diberi data-key untuk konsistensi
           "about-alina-title": "Über Alina:",
           "alina-description": "Finde heraus, was Alina so besonders macht",
-          "visit-channel-button": "Kanal besuchen",
+          "visit-channel-button": "Hier besuchen ❤️",
           // H2 section
           "h2-section": "Alinas Erfolgsrezept: mit Passion bei der Sache",
           "h2-p1": "Viele OnlyFans Models sind auf der Plattform vor allen Dingen wegen einer Sache aktiv: Geld. Sicherlich ist das ein attraktiver Grund, eine OF-Karriere zu starten. Doch wer wirklich erfolgreich sein möchte, tut was, was seine Passion ist. Und Alinas Passion ist nunmal das Modeln. Gerne auch freizügig. Sie fühlt sich eben wohl in ihrer Haut. Und das sieht und spürt man. <strong>Sie liebt einfach, was sie tut</strong>.",
@@ -2645,7 +2657,7 @@
           // alina card"featured-alina-name": "Alina",
           "about-alina-title": "About Alina:",
           "alina-description": "Find out what makes Alina so special",
-          "visit-channel-button": "Visit Channel",
+          "visit-channel-button": "Visit Channel ❤️",
           // H2 section
           "h2-section": "Alina's recipe for success: passion for what she does",
           "h2-p1": "Many OnlyFans models are active on the platform primarily for one reason: money. Sure, that's an attractive reason to start an OF career. But if you really want to be successful, you do what you're passionate about. And Alina's passion is modeling. She likes to be revealing. She feels comfortable in her own skin. And you can see and feel that. <strong>She simply loves what she does</strong>.",
@@ -2892,13 +2904,7 @@
            <rect width="45" height="10.67" fill="#DD0000" />
            <rect y="21.33" width="45" height="10.67" fill="#FFCE00" />
          </svg>`,
-          en: `<svg class="flag-icon" viewBox="0 0 45 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-           <rect width="45" height="32" fill="#012169" />
-           <path d="M0 0L45 32M45 0L0 32" stroke="white" stroke-width="3.5" />
-           <path d="M22.5 0V32M0 16H45" stroke="white" stroke-width="5.5" />
-           <path d="M22.5 0V32M0 16H45" stroke="#C8102E" stroke-width="3.5" />
-           <path d="M0 0L45 32M45 0L0 32" stroke="#C8102E" stroke-width="2" />
-         </svg>`
+          en: `<img class="flag-icon" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/English_language.svg" alt="English Language Flag">`
         };
 
         selectedOption.innerHTML = `${flags[lang]}<span class="lang-text">${lang.toUpperCase()}</span>`;
